@@ -1,0 +1,20 @@
+ -----
+ Lignes Négatives
+ -----
+ Frédéric Dos Santos
+ -----
+  28/01/2013
+
+Gestion des Lignes Négatives
+
+ Tous les mois, lorsque les paies sont générées, des montants doivent être injectés dans la comptabilité.
+ 
+ Il arrive que certains montants dépassent le budget disponible et génèrent des lignes négatives.
+ 
+ Le but de cette application est de supprimer ces lignes négatives en permettant deux actions possibles :
+ 
+  * soit injecter les montants dans d'autres lignes comptables qui ont le budget nécessaire
+  
+  * soit supprimer les montants : la DRH doit alors créer un titre de recette pour chaque ligne négative supprimée
+ 
+ Pour plus d'informations, voir la {{{./docs/LNG-DOC-EXP-01.pdf}documentation}} au format PDF.
