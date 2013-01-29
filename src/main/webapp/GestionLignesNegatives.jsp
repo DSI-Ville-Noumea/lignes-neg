@@ -1,19 +1,19 @@
-<!-- Sample JSP file --> <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+ï»¿<!-- Sample JSP file --> <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML>
 <HEAD>
 <META name="GENERATOR" content="IBM WebSphere Page Designer V3.5.3 for Windows">
 <META http-equiv="Content-Style-Type" content="text/css">
-<TITLE>Gestion des lignes négatives</TITLE>
+<TITLE>Gestion des lignes nÃ©gatives</TITLE>
 <SCRIPT language="javascript" src="js/menu.js"></SCRIPT>
 <SCRIPT>
 
- //afin de sélectionner un élément dans une liste
+ //afin de sÃ©lectionner un Ã©lÃ©ment dans une liste
 function executeBouton(nom)
 {
 document.formu.elements[nom].click();
 }
 
-// afin de mettre le focus sur une zone précise
+// afin de mettre le focus sur une zone prÃ©cise
 function setfocus(nom)
 {
 document.formu.elements[nom].focus();
@@ -41,19 +41,19 @@ document.formu.elements[nom].focus();
 		<TR>
 			<TD>
 			<FORM name="formu" method="POST" action ="LignesNegativesServlet">
-			<FONT size="5" color="teal"><I>Gestion des lignes négatives</I></FONT>
+			<FONT size="5" color="teal"><I>Gestion des lignes nÃ©gatives</I></FONT>
 			<BR>
 			<%//if (process.getBibCourant()==null ) { %>
 
-<!-- Table des lignes négatives -->
-<FIELDSET class="sigp2Fieldset" style="width: 600"><LEGEND align="left">Lignes négatives</LEGEND>
+<!-- Table des lignes nÃ©gatives -->
+<FIELDSET class="sigp2Fieldset" style="width: 600"><LEGEND align="left">Lignes nÃ©gatives</LEGEND>
 <%if (null != process.getBibCourant() && process.initialiseLazyLB().equals(process.getVAL_LB_LIGNES_NEG())) {%>
-	<%= "Pas de lignes négatives pour la bibliothèque "+process.getBibCourant()+"." %>
+	<%= "Pas de lignes nÃ©gatives pour la bibliothÃ¨que "+process.getBibCourant()+"." %>
 <%} else { %>
 			<TABLE border="1" style="width: 100%">
 				<TBODY>
 					<TR>
-						<TD nowrap="nowrap" style="font-family: monospace; font-size: 11px">  Compte   OPI  NFA Employeur  Montant   Code Organisme</TD>
+						<TD nowrap="nowrap" style="font-family: monospace; font-size: 11px">Â Â CompteÂ Â Â OPIÂ Â NFAÂ EmployeurÂ Â MontantÂ Â Â CodeÂ Organisme</TD>
 					</TR>
 				</TBODY>
 			</TABLE><SELECT size="5" onclick="executeBouton('<%=process.getNOM_PB_LIGNES_NEG() %>')" name="<%=process.getNOM_LB_LIGNES_NEG()%>"
@@ -66,15 +66,15 @@ document.formu.elements[nom].focus();
 </FIELDSET>
 
 <br>
-<!-- Table des nomatr négatives -->
+<!-- Table des nomatr nÃ©gatives -->
 <% if (! process.initialiseLazyLB().equals(process.getVAL_LB_LIGNES_NOMATR()) ) {%>
-	<FIELDSET class="sigp2Fieldset" style="width: 600"><LEGEND align="left">Lignes négatives par matricule</LEGEND>
+	<FIELDSET class="sigp2Fieldset" style="width: 600"><LEGEND align="left">Lignes nÃ©gatives par matricule</LEGEND>
 
 			<TABLE border="1" style="width: 100%">
 				<TBODY>
 					<TR>
 						<TD nowrap="nowrap"
-							style="font-family: monospace; font-size: 11px">Nomatr   Compte  OPI  NFA Employeur  Montant   Code Organisme</TD>
+							style="font-family: monospace; font-size: 11px">Nomatr Â Â CompteÂ Â OPIÂ Â NFAÂ EmployeurÂ Â MontantÂ Â Â CodeÂ Organisme</TD>
 					</TR>
 				</TBODY>
 			</TABLE><SELECT size="9" onclick="executeBouton('<%=process.getNOM_PB_LIGNES_NOMATR() %>')"name="<%=process.getNOM_LB_LIGNES_NOMATR()%>"
@@ -108,7 +108,7 @@ document.formu.elements[nom].focus();
 				<TBODY>
 					<TR>
 						<TD nowrap="nowrap"
-							style="font-family: monospace; font-size: 11px">  Compte   OPI  NFA Employeur  Montant   Code Organisme</TD>
+							style="font-family: monospace; font-size: 11px">Â Â CompteÂ Â Â OPIÂ Â NFAÂ EmployeurÂ Â MontantÂ Â Â CodeÂ Organisme</TD>
 					</TR>
 				</TBODY>
 			</TABLE>
