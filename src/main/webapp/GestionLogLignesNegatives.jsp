@@ -1,19 +1,19 @@
-<!-- Sample JSP file --> <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+ï»¿<!-- Sample JSP file --> <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML>
 <HEAD>
 <META name="GENERATOR" content="IBM WebSphere Page Designer V3.5.3 for Windows">
 <META http-equiv="Content-Style-Type" content="text/css">
-<TITLE>Gestion des lignes négatives</TITLE>
+<TITLE>Gestion des lignes nÃ©gatives</TITLE>
 <SCRIPT language="javascript" src="js/menu.js"></SCRIPT>
 <SCRIPT>
 
- //afin de sélectionner un élément dans une liste
+ //afin de sÃ©lectionner un Ã©lÃ©ment dans une liste
 function executeBouton(nom)
 {
 document.formu.elements[nom].click();
 }
 
-// afin de mettre le focus sur une zone précise
+// afin de mettre le focus sur une zone prÃ©cise
 function setfocus(nom)
 {
 document.formu.elements[nom].focus();
@@ -45,7 +45,7 @@ document.formu.elements[nom].focus();
 
 <TABLE border="0" class="sigp2" width="100%">
 <tr>
-						<TD align="right" width="50%">Chaîne/Percou :</TD>
+						<TD align="right" width="50%">ChaÃ®ne/Percou :</TD>
 <TD align="left" width="50%">
 
 			<SELECT size="1" name="<%=process.getNOM_LB_CHAINE_PERCOU()%>"
@@ -58,7 +58,7 @@ document.formu.elements[nom].focus();
 </TR>
 </table>
 
-	<FIELDSET class="sigp2Fieldset" style="width: 600" id="popol"><LEGEND align="left">Lignes négatives supprimées</LEGEND>
+	<FIELDSET class="sigp2Fieldset" style="width: 600" id="popol"><LEGEND align="left">Lignes nÃ©gatives supprimÃ©es</LEGEND>
 
 
 

@@ -1,4 +1,4 @@
-var onglet = new Array();
+﻿var onglet = new Array();
 var lien = new Array();
 
 var nbOnglet = 0;
