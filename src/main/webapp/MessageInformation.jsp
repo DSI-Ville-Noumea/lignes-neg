@@ -1,4 +1,5 @@
 ﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<%@page contentType="text/html;charset=UTF-8"%>
 <HTML>
 <HEAD>
 <META name="GENERATOR" content="IBM WebSphere Page Designer V3.5.3 for Windows">
@@ -7,7 +8,7 @@
 <LINK rel="stylesheet" href="theme/sigp2.css" type="text/css">
 <SCRIPT language="javascript" src="js/GestionBoutonDroit.js"></SCRIPT>
 </HEAD>
-<BODY bgcolor="#FFFFFF" BGPROPERTIES="FIXED" background="images/fond.jpg" class="sigp2-BODY"><jsp:useBean class="nc.mairie.commun.process.MessageInformation" id="process" scope="session"></jsp:useBean>
+<BODY bgcolor="#FFFFFF" background="images/fond.jpg" class="sigp2-BODY"><jsp:useBean class="nc.mairie.commun.process.MessageInformation" id="process" scope="session"></jsp:useBean>
 <%String message = process.getVAL_ST_MESSAGE();%>
 <TABLE border="0" width="100%" height="100%" style="text-align : center;">
   <TBODY>
