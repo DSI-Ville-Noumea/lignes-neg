@@ -1,4 +1,5 @@
 ﻿<!-- Sample JSP file --> <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<%@page contentType="text/html;charset=UTF-8"%>
 <HTML>
 <HEAD>
 <META name="GENERATOR" content="IBM WebSphere Page Designer V3.5.3 for Windows">
@@ -22,7 +23,6 @@ document.formu.elements[nom].focus();
 
 
 </SCRIPT>
-<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <LINK href="theme/sigp2.css" rel="stylesheet" type="text/css">
 
 </HEAD>
