@@ -63,6 +63,13 @@ public class GestionLogLignesNegatives extends nc.mairie.technique.BasicProcess 
  */
 public void initialiseZones(javax.servlet.http.HttpServletRequest request) throws Exception{
 
+	//Si BIBcourant null, on le récupère de la session
+	if (getBibCourant() == null) {
+		setBibCourant((String)VariableGlobale.recuperer(request, "BIB"));
+		initialiseListeChainePercou(request);
+		setLigNegLogCourant(null);
+	}
+	
 	//Si la lib en param
 	if (request.getParameter("BIB")!=null) {
 		setBibCourant(request.getParameter("BIB"));

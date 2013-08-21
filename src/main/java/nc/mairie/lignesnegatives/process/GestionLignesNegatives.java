@@ -39,6 +39,11 @@ public class GestionLignesNegatives extends nc.mairie.technique.BasicProcess {
  */
 public void initialiseZones(javax.servlet.http.HttpServletRequest request) throws Exception{
 
+	//Si BIBcou rant null, on le récupère de la session
+	if (getBibCourant() == null) {
+		setBibCourant((String)VariableGlobale.recuperer(request, "BIB"));
+	}
+	
 	//Si la lib en param
 	if (request.getParameter("BIB")!=null) {
 		

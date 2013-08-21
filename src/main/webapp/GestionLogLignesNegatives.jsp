@@ -27,21 +27,22 @@ document.formu.elements[nom].focus();
 
 </HEAD>
 
-<BODY bgcolor="#FFFFFF" BGPROPERTIES="FIXED" background="images/fond.jpg" >
+<BODY bgcolor="#FFFFFF" background="images/fond.jpg" >
 
 <jsp:useBean id="process"
 	class="nc.mairie.lignesnegatives.process.GestionLogLignesNegatives" scope="session"></jsp:useBean>
-<script>
-	ajoute('Gestion', '<%=request.getContextPath()%>/LignesNegativesServlet?ACTIVITE=GestionLignesNegatives&BIB=<%=process.getBibCourant()%>');
-	ajoute('Titres de Recette', '<%=request.getContextPath()%>/LignesNegativesServlet?ACTIVITE=GestionLogLignesNegatives&BIB=<%=process.getBibCourant()%>');
-	insererMenu('Menu');
-</script>
 <TABLE border="0" width="580" style="text-align : center;" align="center">
 	<TBODY align="center">
 		<%@ include file="BanniereErreur.jsp"%>
 		<TR>
 			<TD>
 			<FORM name="formu" method="POST" action ="LignesNegativesServlet">
+<script>
+	ajoute('Gestion', '<%=request.getContextPath()%>/LignesNegativesServlet?BIB=<%=process.getBibCourant()%>','GestionLignesNegatives');
+	ajoute('Titres de Recette', '<%=request.getContextPath()%>/LignesNegativesServlet?BIB=<%=process.getBibCourant()%>','GestionLogLignesNegatives');
+	insererMenu('Menu');
+</script>
+			
 
 <TABLE border="0" class="sigp2" width="100%">
 <tr>

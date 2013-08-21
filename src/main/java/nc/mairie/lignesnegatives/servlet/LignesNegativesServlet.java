@@ -7,6 +7,10 @@
 package nc.mairie.lignesnegatives.servlet;
 
 import java.util.ArrayList;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import nc.mairie.lignesnegatives.metier.LigNegHab;
 import nc.mairie.lignesnegatives.robot.LignesNegativesRobot;
 import nc.mairie.robot.Robot;
@@ -69,4 +73,16 @@ public class LignesNegativesServlet extends Frontale {
 		VariableGlobale.enlever(request,VariableGlobale.GLOBAL_USER_APPLI);
 		return false;
 	}
+	
+	@Override
+	public void performTask(HttpServletRequest request, HttpServletResponse response) {
+		//Si bib dans le param, on le stocke dans la session
+		String bib = request.getParameter("BIB");
+		if (bib != null) {
+			VariableGlobale.ajouter(request, "BIB", bib);
+		}
+		
+		super.performTask(request, response);
+	}
+	
 }
