@@ -3,22 +3,6 @@
 <web-app id="WebApp_ID">
 	<display-name>lignesNegatives</display-name>
 
-      <context-param>
-         <param-name>HOST_SGBD</param-name>
-         <param-value>noumea</param-value>
-		<description></description>
-      </context-param>
-      <context-param>
-         <param-name>HOST_SGBD_ADMIN</param-name>
-         <param-value>***REMOVED***</param-value>
-<description></description>
-      </context-param>
-      <context-param>
-         <param-name>HOST_SGBD_PWD</param-name>
-         <param-value>***REMOVED***</param-value>
-<description></description>
-      </context-param>
- 
 	<servlet>
 		<servlet-name>LignesNegativesServlet</servlet-name>
 		<display-name>LignesNegativesServlet</display-name>
