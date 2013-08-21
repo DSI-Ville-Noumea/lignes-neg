@@ -25,7 +25,7 @@
 		<description></description>
 		<servlet-class>
 		nc.mairie.lignesnegatives.servlet.LignesNegativesServlet</servlet-class>
-		<load-on-startup>-1</load-on-startup>
+		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>LignesNegativesServlet</servlet-name>
