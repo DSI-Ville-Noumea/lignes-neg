@@ -1,9 +1,9 @@
-<%@page contentType="text/html;charset=UTF-8"%>
+<%@page contentType="text/plain;charset=UTF-8"%>
 <%@page import="java.net.InetAddress"%>
-annuaire.version=${version}
-annuaire.localhost.hostaddress=<%=InetAddress.getLocalHost().getHostAddress() %>
-annuaire.localhost.canonicalhostname=<%=InetAddress.getLocalHost().getCanonicalHostName() %>
-annuaire.localhost.hostname=<%=InetAddress.getLocalHost().getHostName() %>
+${project.artifactId}.version=${project.version}
+${project.artifactId}.localhost.hostaddress=<%=InetAddress.getLocalHost().getHostAddress() %>
+${project.artifactId}.localhost.canonicalhostname=<%=InetAddress.getLocalHost().getCanonicalHostName() %>
+${project.artifactId}.localhost.hostname=<%=InetAddress.getLocalHost().getHostName() %>
 <% 
 HttpSession theSession = request.getSession( false );
 
