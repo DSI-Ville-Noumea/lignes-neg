@@ -1,5 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>nc.mairie</groupId>
 	<artifactId>ligneg</artifactId>
@@ -55,7 +55,7 @@
 		<site>
 			<id>ligneg.website</id>
 			<name>Lignes Negatives Website</name>
-			<url>file:\\cristal\dsi$\DSI\PROJETS\2 - ARCHIVES\2 - Métiers\Lignes Negatives\Documentation_Agile\</url>
+			<url>file:\\cristal\DSI$\DSI\PROJETS\doxia\${project.name}</url>
 		</site>
 	</distributionManagement>
 
@@ -93,7 +93,7 @@
 						</resource>
 						<resource>
 							<directory>src/main/webapp</directory>
-							<targetPath></targetPath>
+							<targetPath/>
 							<filtering>true</filtering>
 						</resource>
 						<resource>
