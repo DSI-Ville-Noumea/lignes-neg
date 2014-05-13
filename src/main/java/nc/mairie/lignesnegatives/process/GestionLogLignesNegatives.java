@@ -10,20 +10,24 @@ import nc.mairie.technique.*;
  * @author : Générateur de process
 */
 public class GestionLogLignesNegatives extends nc.mairie.technique.BasicProcess {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3637009845829323708L;
 	public static final int STATUT_LIGNES_NEGATIVES = 1;
 	private java.lang.String[] LB_CHAINE_PERCOU;
 	private String bibCourant;
-	private ArrayList listeChainePercou = null;
+	private ArrayList<LigNegLog> listeChainePercou = null;
 	private LigNegLog ligNegLogCourant = null;
 	private String lignesNegativesSupprimees = null;
 
-	private ArrayList getListeChainePercou() {
+	private ArrayList<LigNegLog> getListeChainePercou() {
 		if (listeChainePercou == null) {
-			listeChainePercou = new ArrayList();
+			listeChainePercou = new ArrayList<LigNegLog>();
 		}
 		return listeChainePercou;
 	}
-	private void setListeChainePercou(ArrayList listeChainePercou) {
+	private void setListeChainePercou(ArrayList<LigNegLog> listeChainePercou) {
 		this.listeChainePercou = listeChainePercou;
 	}
 	/**
@@ -32,7 +36,7 @@ public class GestionLogLignesNegatives extends nc.mairie.technique.BasicProcess 
 	 */
 	private void initialiseListeChainePercou(javax.servlet.http.HttpServletRequest request) throws Exception{
 
-		java.util.ArrayList a = new ArrayList();
+		java.util.ArrayList<LigNegLog> a = new ArrayList<>();
 		
 		a=LigNegLog.listerLigNegLogPourTitreRecette(getTransaction(), getBibCourant());
 		a.add(0,new LigNegLog());
@@ -258,7 +262,7 @@ private void formateLignesNegativesSupprimees() throws Exception {
 		return; 
 	}
 	
-	ArrayList a = LigNegLog.listerLigNegLogChainePercou(getTransaction(),getBibCourant(), aLog.getChaine(), aLog.getDateaction());
+	ArrayList<LigNegLog> a = LigNegLog.listerLigNegLogChainePercou(getTransaction(),getBibCourant(), aLog.getChaine(), aLog.getDateaction());
 	
 	for (int i = 0; i < a.size(); i++) {
 		String temp = ((LigNegLog)a.get(i)).getLibelleaction();

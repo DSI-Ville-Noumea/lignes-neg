@@ -32,8 +32,8 @@ protected java.lang.String definirNomTable() {
 /**
  * Retourne le mappage de chaque colonne de la table.
  */
-protected java.util.Hashtable definirMappageTable() throws NoSuchFieldException {
-	java.util.Hashtable mappage = new java.util.Hashtable();
+protected java.util.Hashtable<String, BasicRecord> definirMappageTable() throws NoSuchFieldException {
+	java.util.Hashtable<String, BasicRecord> mappage = new java.util.Hashtable<String, BasicRecord>();
 	mappage.put("USERNAME", new BasicRecord("USERNAME", "VARCHAR", getMyLigNegHab().getClass().getField("username"), "STRING"));
 	return mappage;
 }
@@ -41,7 +41,7 @@ protected java.util.Hashtable definirMappageTable() throws NoSuchFieldException 
  * Retourne un ArrayList d'objet métier : LigNegHab.
  * @return java.util.ArrayList
  */
-public java.util.ArrayList listerLigNegHab(nc.mairie.technique.Transaction aTransaction) throws Exception {
+public java.util.ArrayList<LigNegHab> listerLigNegHab(nc.mairie.technique.Transaction aTransaction) throws Exception {
 	return executeSelectListe(aTransaction,"select * from "+getTable()+"");
 }
 }

@@ -12,6 +12,10 @@ import nc.mairie.technique.*;
  * @author : Générateur de process
 */
 public class GestionLignesNegatives extends nc.mairie.technique.BasicProcess {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4911540056099660741L;
 	public static final int STATUT_RECETTE = 1;
 	private java.lang.String[] LB_BIBLIOTHEQUE;
 	private java.lang.String[] LB_LIGNES_NEG;
@@ -19,10 +23,9 @@ public class GestionLignesNegatives extends nc.mairie.technique.BasicProcess {
 	private java.lang.String[] LB_LIGNES_POSSIBLES;
 	private String ACTION_SUPPRESSION = "Suppression d'une ligne negative.<FONT color='red'> Veuillez valider votre choix.</FONT>";
 	public String ACTION_MODIFICATION = "Modification d'une ligne negative.";
-	private java.util.ArrayList listeBibliotheques;
-	private java.util.ArrayList listeLignesNegatives;
-	private java.util.ArrayList listeLignesNomatr;
-	private java.util.ArrayList listeLignesPossibles;
+	private java.util.ArrayList<Salaire> listeLignesNegatives;
+	private java.util.ArrayList<Salaire> listeLignesNomatr;
+	private java.util.ArrayList<Salaire> listeLignesPossibles;
 	private String bibCourant;
 	private Salaire salaireNegatifCourant;
 	private Salaire salaireNomatrCourant;
@@ -168,7 +171,7 @@ public boolean performPB_LIGNES_NEG(javax.servlet.http.HttpServletRequest reques
 	//	On récupère la ligne
 	int numligne = (Services.estNumerique(getZone(getNOM_LB_LIGNES_NEG_SELECT())) ? Integer.parseInt(getZone(getNOM_LB_LIGNES_NEG_SELECT())) : -1);
 	setSalaireNegatifCourant(numligne < 0 || getListeLignesNegatives().size() == 0 ?
-			null : (Salaire)getListeLignesNegatives().get(numligne));
+			null : getListeLignesNegatives().get(numligne));
 	
 	initialiseListeLignesNomatr(request,true);
 	
@@ -224,7 +227,7 @@ public boolean performPB_LIGNES_NOMATR(javax.servlet.http.HttpServletRequest req
 	//	On récupère la ligne
 	int numligne = (Services.estNumerique(getZone(getNOM_LB_LIGNES_NOMATR_SELECT())) ? Integer.parseInt(getZone(getNOM_LB_LIGNES_NOMATR_SELECT())) : -1);
 	setSalaireNomatrCourant(numligne < 0 || getListeLignesNomatr().size() == 0 ?
-			null : (Salaire)getListeLignesNomatr().get(numligne));
+			null : getListeLignesNomatr().get(numligne));
 	
 	addZone(getNOM_ST_ACTION(),"");
 
@@ -281,7 +284,7 @@ public boolean performPB_VALIDER(javax.servlet.http.HttpServletRequest request) 
 		//	On récupère la ligne
 		int numligne = (Services.estNumerique(getZone(getNOM_LB_LIGNES_POSSIBLES_SELECT())) ? Integer.parseInt(getZone(getNOM_LB_LIGNES_POSSIBLES_SELECT())) : -1);
 		setSalairePossibleCourant(numligne < 0 || getListeLignesPossibles().size() == 0 ?
-				null : (Salaire)getListeLignesPossibles().get(numligne));
+				null : getListeLignesPossibles().get(numligne));
 		if (getSalairePossibleCourant() == null) {
 			getTransaction().declarerErreur("Vous devez sélectionner un élément de la liste");
 			return false;
@@ -630,7 +633,7 @@ private void initialiseListeBibliotheque(javax.servlet.http.HttpServletRequest r
  */
 private void initialiseListeLignesNegatives(javax.servlet.http.HttpServletRequest request, boolean initSelect) throws Exception{
 
-	java.util.ArrayList a = new ArrayList();
+	java.util.ArrayList<Salaire> a = new ArrayList<>();
 	
 	if (getBibCourant() != null) {
 		//Recherche des Administrations
@@ -643,7 +646,7 @@ private void initialiseListeLignesNegatives(javax.servlet.http.HttpServletReques
 	
 	//S'il y a des lignes négative
 	if(a.size() != 0){
-		setChaineCourant(((Salaire)a.get(0)).getCdchai());
+		setChaineCourant(a.get(0).getCdchai());
 		int tailles [] = {8,4,5,9,8,6,30};
 		String attr [] = {"numcpte","noacti","codfon","refemp","summontant","idetbs","enscom"};
 		String pad [] = {"D","D","D","C","D","D","G"};
@@ -667,7 +670,7 @@ private void initialiseListeLignesNegatives(javax.servlet.http.HttpServletReques
  */
 private void initialiseListeLignesNomatr(javax.servlet.http.HttpServletRequest request, boolean initSelect) throws Exception{
 
-	java.util.ArrayList a = new ArrayList();
+	java.util.ArrayList<Salaire> a = new ArrayList<>();
 	
 	if (getSalaireNegatifCourant() != null) {
 		//Recherche des Administrations
@@ -699,7 +702,7 @@ private void initialiseListeLignesNomatr(javax.servlet.http.HttpServletRequest r
  */
 private void initialiseListeLignesPossibles(javax.servlet.http.HttpServletRequest request, boolean initSelect) throws Exception{
 
-	java.util.ArrayList a = new ArrayList();
+	java.util.ArrayList<Salaire> a = new ArrayList<>();
 	
 	if (getSalaireNomatrCourant() != null) {
 		//Recherche des Administrations
@@ -725,42 +728,33 @@ private void initialiseListeLignesPossibles(javax.servlet.http.HttpServletReques
 	}
 }
 
-private java.util.ArrayList getListeBibliotheques() {
-		if (listeBibliotheques == null) {
-			listeBibliotheques = new ArrayList();
-		}
-		return listeBibliotheques;
-	}
-	private void setListeBibliotheques(java.util.ArrayList listeBibliotheques) {
-		this.listeBibliotheques = listeBibliotheques;
-	}
-	private java.util.ArrayList getListeLignesNegatives() {
+	private java.util.ArrayList<Salaire> getListeLignesNegatives() {
 		if (listeLignesNegatives == null) {
-			listeLignesNegatives = new ArrayList();
+			listeLignesNegatives = new ArrayList<Salaire>();
 		}
 		return listeLignesNegatives;
 	}
 	private void setListeLignesNegatives(
-			java.util.ArrayList listeLignesNegatives) {
+			java.util.ArrayList<Salaire> listeLignesNegatives) {
 		this.listeLignesNegatives = listeLignesNegatives;
 	}
-	private java.util.ArrayList getListeLignesNomatr() {
+	private java.util.ArrayList<Salaire> getListeLignesNomatr() {
 		if (listeLignesNomatr == null) {
-			listeLignesNomatr = new ArrayList();
+			listeLignesNomatr = new ArrayList<Salaire>();
 		}
 		return listeLignesNomatr;
 	}
 	private void setListeLignesNomatr(
-			java.util.ArrayList listeLignesNomatr) {
+			java.util.ArrayList<Salaire> listeLignesNomatr) {
 		this.listeLignesNomatr = listeLignesNomatr;
 	}
-	public java.util.ArrayList getListeLignesPossibles() {
+	public java.util.ArrayList<Salaire> getListeLignesPossibles() {
 		if (listeLignesPossibles == null) {
-			listeLignesPossibles = new ArrayList();
+			listeLignesPossibles = new ArrayList<Salaire>();
 		}
 		return listeLignesPossibles;
 	}
-	public void setListeLignesPossibles(java.util.ArrayList listeLignesPossibles) {
+	public void setListeLignesPossibles(java.util.ArrayList<Salaire> listeLignesPossibles) {
 		this.listeLignesPossibles = listeLignesPossibles;
 	}
 	/**

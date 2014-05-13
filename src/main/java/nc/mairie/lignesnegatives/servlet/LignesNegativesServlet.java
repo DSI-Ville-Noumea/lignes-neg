@@ -1,7 +1,6 @@
 /*
  * Created on 11 mai 2006
  *
- * TODO To change the template for this generated file go to
  * Window - Preferences - Java - Code Style - Code Templates
  */
 package nc.mairie.lignesnegatives.servlet;
@@ -22,16 +21,19 @@ import nc.mairie.technique.VariableGlobale;
 /**
  * @author boulu72
  *
- * TODO To change the template for this generated type comment go to
  * Window - Preferences - Java - Code Style - Code Templates
  */
 public class LignesNegativesServlet extends Frontale {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 890074412743062933L;
 
 	/* (non-Javadoc)
 	 * @see nc.mairie.servlets.Frontale#getServletRobot()
 	 */
 	protected Robot getServletRobot() {
-		// TODO Auto-generated method stub
 		return new LignesNegativesRobot();
 	}
 	/**
@@ -58,7 +60,7 @@ public class LignesNegativesServlet extends Frontale {
 		
 		//On récupère la liste des users
 		Transaction aTransaction = new Transaction(user);
-		ArrayList a = LigNegHab.listerLigNegHab(aTransaction);
+		ArrayList<LigNegHab> a = LigNegHab.listerLigNegHab(aTransaction);
 		aTransaction.rollbackTransaction();
 		aTransaction.fermerConnexion();
 		

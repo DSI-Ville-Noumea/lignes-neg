@@ -17,7 +17,7 @@ var aPrm = new Array();    // Pour stock. le nom des paramÃ¨tres
 var aVal = new Array();    // Pour stock. la valeur des paramÃ¨tres
 var objQS = new Object();  // Objet pour stock. le nom des paramÃ¨tres
 
-for (i=0;i < dbl.length;i++) {
+for (var i=0;i < dbl.length;i++) {
   // Recup. le nom des parametres (Attention : elem.1 du tab. = param.1)
   aPrm[i+1] = dbl[i].substring(0,dbl[i].indexOf('='));
   

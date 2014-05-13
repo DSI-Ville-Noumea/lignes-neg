@@ -32,8 +32,8 @@ protected java.lang.String definirNomTable() {
 /**
  * Retourne le mappage de chaque colonne de la table.
  */
-protected java.util.Hashtable definirMappageTable() throws NoSuchFieldException {
-	java.util.Hashtable mappage = new java.util.Hashtable();
+protected java.util.Hashtable<String, BasicRecord> definirMappageTable() throws NoSuchFieldException {
+	java.util.Hashtable<String, BasicRecord> mappage = new java.util.Hashtable<String, BasicRecord>();
 	mappage.put("USER", new BasicRecord("USER", "VARCHAR", getMyLigNegLog().getClass().getField("user"), "STRING"));
 	mappage.put("BIB", new BasicRecord("BIB", "VARCHAR", getMyLigNegLog().getClass().getField("bib"), "STRING"));
 	mappage.put("CHAINE", new BasicRecord("CHAINE", "VARCHAR", getMyLigNegLog().getClass().getField("chaine"), "STRING"));
@@ -53,7 +53,7 @@ public boolean creerLigNegLog(nc.mairie.technique.Transaction aTransaction)  thr
  * Retourne un ArrayList d'objet métier : LigNegLog.
  * @return java.util.ArrayList
  */
-public java.util.ArrayList listerLigNegLogPourTitreRecette(nc.mairie.technique.Transaction aTransaction, String bib) throws Exception {
+public java.util.ArrayList<LigNegLog> listerLigNegLogPourTitreRecette(nc.mairie.technique.Transaction aTransaction, String bib) throws Exception {
 	return executeSelectListe(aTransaction,
 			"select distinct chaine, substr(dateaction,1,7) as dateaction"+
 			" from mairie.ligneglog"+
@@ -65,7 +65,7 @@ public java.util.ArrayList listerLigNegLogPourTitreRecette(nc.mairie.technique.T
  * Retourne un ArrayList d'objet métier : LigNegLog.
  * @return java.util.ArrayList
  */
-public java.util.ArrayList listerLigNegLogChainePercou(nc.mairie.technique.Transaction aTransaction, String bib, String chaine, String percou) throws Exception {
+public java.util.ArrayList<LigNegLog> listerLigNegLogChainePercou(nc.mairie.technique.Transaction aTransaction, String bib, String chaine, String percou) throws Exception {
 	return executeSelectListe(aTransaction,
 			"select *"+
 			" from mairie.ligneglog"+

@@ -1,6 +1,5 @@
 package nc.mairie.lignesnegatives.metier;
 
-import nc.mairie.technique.MairieMessages;
 /**
  * Objet métier LigNegHab
  */
@@ -49,7 +48,7 @@ public String toString() {
  * Retourne un ArrayList d'objet métier : LigNegHab.
  * @return java.util.ArrayList
  */
-public static java.util.ArrayList listerLigNegHab(nc.mairie.technique.Transaction aTransaction) throws Exception{
+public static java.util.ArrayList<LigNegHab> listerLigNegHab(nc.mairie.technique.Transaction aTransaction) throws Exception{
 	LigNegHab unLigNegHab = new LigNegHab();
 	return unLigNegHab.getMyLigNegHabBroker().listerLigNegHab(aTransaction);
 }

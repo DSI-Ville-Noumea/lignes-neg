@@ -1,7 +1,6 @@
 package nc.mairie.lignesnegatives.metier;
 
 import nc.mairie.technique.BasicRecord;
-import nc.mairie.technique.Services;
 /**
  * Broker de l'Objet métier Salaire
  */
@@ -34,8 +33,8 @@ protected java.lang.String definirNomTable() {
 /**
  * Retourne le mappage de chaque colonne de la table.
  */
-protected java.util.Hashtable definirMappageTable() throws NoSuchFieldException {
-	java.util.Hashtable mappage = new java.util.Hashtable();
+protected java.util.Hashtable<String, BasicRecord> definirMappageTable() throws NoSuchFieldException {
+	java.util.Hashtable<String, BasicRecord> mappage = new java.util.Hashtable<String, BasicRecord>();
 	mappage.put("NOMATR", new BasicRecord("NOMATR", "NUMERIC", getMySalaire().getClass().getField("nomatr"), "STRING"));
 	mappage.put("NUMCPTE", new BasicRecord("NUMCPTE", "CHAR", getMySalaire().getClass().getField("numcpte"), "STRING"));
 	mappage.put("CODFON", new BasicRecord("CODFON", "CHAR", getMySalaire().getClass().getField("codfon"), "STRING"));
@@ -93,7 +92,7 @@ public boolean supprimerSalaire(nc.mairie.technique.Transaction aTransaction, St
 }
 
 
-public java.util.ArrayList listerSalaireNegatif(nc.mairie.technique.Transaction aTransaction, String bib) throws Exception {
+public java.util.ArrayList<Salaire> listerSalaireNegatif(nc.mairie.technique.Transaction aTransaction, String bib) throws Exception {
 	
 	return executeSelectListe(aTransaction,
 			
@@ -109,7 +108,7 @@ public java.util.ArrayList listerSalaireNegatif(nc.mairie.technique.Transaction 
  * Retourne un ArrayList d'objet métier : Salaire.
  * @return java.util.ArrayList
  */
-public java.util.ArrayList listerSalaireNegatifFromSalaireNegatif(nc.mairie.technique.Transaction aTransaction, String numcpte, String idetbs, String noacti, String codfon, String refemp, String bib) throws Exception {
+public java.util.ArrayList<Salaire> listerSalaireNegatifFromSalaireNegatif(nc.mairie.technique.Transaction aTransaction, String numcpte, String idetbs, String noacti, String codfon, String refemp, String bib) throws Exception {
 	return executeSelectListe(aTransaction,
 			
 			" select nomatr, NUMCPTE, s.idetbs, noacti, codfon, refemp, montnt, e.enscom, cdchai" +
@@ -130,7 +129,7 @@ public java.util.ArrayList listerSalaireNegatifFromSalaireNegatif(nc.mairie.tech
  * Retourne un ArrayList d'objet métier : Salaire.
  * @return java.util.ArrayList
  */
-public java.util.ArrayList listerSalairePossiblesFromSalaireMatricule(nc.mairie.technique.Transaction aTransaction, String nomatr, String numcpte, String idetbs, String montnt, String bib) throws Exception {
+public java.util.ArrayList<Salaire> listerSalairePossiblesFromSalaireMatricule(nc.mairie.technique.Transaction aTransaction, String nomatr, String numcpte, String idetbs, String montnt, String bib) throws Exception {
 	return executeSelectListe(aTransaction,
 			
 			" select NUMCPTE, s.idetbs, noacti, codfon, refemp, sum(montnt) as summontant, e.enscom, cdchai" +

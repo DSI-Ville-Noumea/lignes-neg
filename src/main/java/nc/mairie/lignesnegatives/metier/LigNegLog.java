@@ -113,7 +113,7 @@ public String toString() {
  * Retourne un ArrayList d'objet métier : LigNegLog.
  * @return java.util.ArrayList
  */
-public static java.util.ArrayList listerLigNegLogPourTitreRecette(nc.mairie.technique.Transaction aTransaction, String bib) throws Exception{
+public static java.util.ArrayList<LigNegLog> listerLigNegLogPourTitreRecette(nc.mairie.technique.Transaction aTransaction, String bib) throws Exception{
 	LigNegLog unLigNegLog = new LigNegLog();
 	return unLigNegLog.getMyLigNegLogBroker().listerLigNegLogPourTitreRecette(aTransaction, bib);
 }
@@ -121,7 +121,7 @@ public static java.util.ArrayList listerLigNegLogPourTitreRecette(nc.mairie.tech
  * Retourne un ArrayList d'objet métier : LigNegLog.
  * @return java.util.ArrayList
  */
-public static java.util.ArrayList listerLigNegLogChainePercou(nc.mairie.technique.Transaction aTransaction, String bib, String chaine, String percou) throws Exception{
+public static java.util.ArrayList<LigNegLog> listerLigNegLogChainePercou(nc.mairie.technique.Transaction aTransaction, String bib, String chaine, String percou) throws Exception{
 	LigNegLog unLigNegLog = new LigNegLog();
 	return unLigNegLog.getMyLigNegLogBroker().listerLigNegLogChainePercou(aTransaction, bib, chaine, percou);
 }

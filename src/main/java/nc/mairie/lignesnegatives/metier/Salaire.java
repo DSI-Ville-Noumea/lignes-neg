@@ -1,6 +1,5 @@
 package nc.mairie.lignesnegatives.metier;
 
-import nc.mairie.technique.MairieMessages;
 /**
  * Objet métier Salaire
  */
@@ -144,7 +143,7 @@ public String toString() {
  * Retourne un ArrayList d'objet métier : Salaire.
  * @return java.util.ArrayList
  */
-public static java.util.ArrayList listerSalaireNegatif(nc.mairie.technique.Transaction aTransaction, String bib) throws Exception{
+public static java.util.ArrayList<Salaire> listerSalaireNegatif(nc.mairie.technique.Transaction aTransaction, String bib) throws Exception{
 	Salaire unSalaire = new Salaire();
 	return unSalaire.getMySalaireBroker().listerSalaireNegatif(aTransaction, bib);
 }
@@ -152,7 +151,7 @@ public static java.util.ArrayList listerSalaireNegatif(nc.mairie.technique.Trans
  * Retourne un ArrayList d'objet métier : Salaire.
  * @return java.util.ArrayList
  */
-public static java.util.ArrayList listerSalaireNegatifFromSalaireNegatif(nc.mairie.technique.Transaction aTransaction, Salaire aSalaire, String bib) throws Exception{
+public static java.util.ArrayList<Salaire> listerSalaireNegatifFromSalaireNegatif(nc.mairie.technique.Transaction aTransaction, Salaire aSalaire, String bib) throws Exception{
 	Salaire unSalaire = new Salaire();
 	return unSalaire.getMySalaireBroker().listerSalaireNegatifFromSalaireNegatif(aTransaction, aSalaire.getNumcpte(), aSalaire.getIdetbs(), aSalaire.getNoacti(), aSalaire.getCodfon(), aSalaire.getRefemp(), bib);
 }
@@ -160,7 +159,7 @@ public static java.util.ArrayList listerSalaireNegatifFromSalaireNegatif(nc.mair
  * Retourne un ArrayList d'objet métier : Salaire.
  * @return java.util.ArrayList
  */
-public static java.util.ArrayList listerSalairePossiblesFromSalaireMatricule(nc.mairie.technique.Transaction aTransaction, Salaire aSalaire, String bib) throws Exception{
+public static java.util.ArrayList<Salaire> listerSalairePossiblesFromSalaireMatricule(nc.mairie.technique.Transaction aTransaction, Salaire aSalaire, String bib) throws Exception{
 	Salaire unSalaire = new Salaire();
 	return unSalaire.getMySalaireBroker().listerSalairePossiblesFromSalaireMatricule(aTransaction, aSalaire.getNomatr(), aSalaire.getNumcpte(), aSalaire.getIdetbs(), aSalaire.getMontnt(), bib);
 }

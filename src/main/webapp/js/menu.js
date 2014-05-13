@@ -49,7 +49,7 @@ document.writeln('<TBODY>');
 
 document.writeln('<INPUT id= "ACTIVIT" name="ACTIVIT" type="hidden" value=""/>');
 
-	for (i=0;i<nbOnglet;i++) {
+	for (var i=0;i<nbOnglet;i++) {
 		document.writeln('<TR>');
 		document.writeln('<TD border=0 align="left" onclick="document.getElementById(\'ACTIVIT\').value = \''+activite[i]+'\'; document.getElementById(\'ACTIVIT\').name=(\'ACTIVITE\');  document.formu.submit();">');
 		document.writeln(onglet[i]);

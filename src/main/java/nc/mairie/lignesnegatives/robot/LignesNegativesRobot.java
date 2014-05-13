@@ -1,7 +1,6 @@
 /*
  * Created on 11 mai 2006
  *
- * TODO To change the template for this generated file go to
  * Window - Preferences - Java - Code Style - Code Templates
  */
 package nc.mairie.lignesnegatives.robot;
@@ -17,16 +16,19 @@ import nc.mairie.technique.BasicProcess;
 /**
  * @author boulu72
  *
- * TODO To change the template for this generated type comment go to
  * Window - Preferences - Java - Code Style - Code Templates
  */
 public class LignesNegativesRobot extends Robot {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3259395076675356131L;
 
 	/* (non-Javadoc)
 	 * @see nc.mairie.robot.Robot#getDefaultProcess()
 	 */
 	public BasicProcess getDefaultProcess() throws Exception {
-		// TODO Auto-generated method stub
 		return new GestionLignesNegatives();
 	}
 
@@ -34,7 +36,6 @@ public class LignesNegativesRobot extends Robot {
 	 * @see nc.mairie.robot.Robot#getFirstProcess(java.lang.String)
 	 */
 	public BasicProcess getFirstProcess(String activite) throws Exception {
-		// TODO Auto-generated method stub
 		if (activite.equals("GestionLignesNegatives")) {
 			return new GestionLignesNegatives();
 		} else if (activite.equals("GestionLogLignesNegatives")) {
@@ -49,9 +50,8 @@ public class LignesNegativesRobot extends Robot {
 	/* (non-Javadoc)
 	 * @see nc.mairie.robot.Robot#initialiseNavigation()
 	 */
-	protected Hashtable initialiseNavigation() {
-		// TODO Auto-generated method stub
-		java.util.Hashtable navigation = new java.util.Hashtable();
+	protected Hashtable<String, String> initialiseNavigation() {
+		java.util.Hashtable<String, String> navigation = new java.util.Hashtable<>();
 		
 		//Classe GestionLignesNegatives
 		navigation.put(GestionLignesNegatives.class.getName()+GestionLignesNegatives.STATUT_RECETTE,GestionLogLignesNegatives.class.getName());
@@ -66,7 +66,6 @@ public class LignesNegativesRobot extends Robot {
 	 * @see nc.mairie.robot.Robot#initialiseTesteur()
 	 */
 	protected Testeur initialiseTesteur() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
