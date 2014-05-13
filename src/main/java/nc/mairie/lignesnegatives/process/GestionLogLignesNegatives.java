@@ -36,7 +36,7 @@ public class GestionLogLignesNegatives extends nc.mairie.technique.BasicProcess 
 	 */
 	private void initialiseListeChainePercou(javax.servlet.http.HttpServletRequest request) throws Exception{
 
-		java.util.ArrayList<LigNegLog> a = new ArrayList<>();
+		java.util.ArrayList<LigNegLog> a = new ArrayList<LigNegLog>();
 		
 		a=LigNegLog.listerLigNegLogPourTitreRecette(getTransaction(), getBibCourant());
 		a.add(0,new LigNegLog());

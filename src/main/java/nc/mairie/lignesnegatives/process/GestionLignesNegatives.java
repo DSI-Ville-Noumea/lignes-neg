@@ -633,7 +633,7 @@ private void initialiseListeBibliotheque(javax.servlet.http.HttpServletRequest r
  */
 private void initialiseListeLignesNegatives(javax.servlet.http.HttpServletRequest request, boolean initSelect) throws Exception{
 
-	java.util.ArrayList<Salaire> a = new ArrayList<>();
+	java.util.ArrayList<Salaire> a = new ArrayList<Salaire>();
 	
 	if (getBibCourant() != null) {
 		//Recherche des Administrations
@@ -670,7 +670,7 @@ private void initialiseListeLignesNegatives(javax.servlet.http.HttpServletReques
  */
 private void initialiseListeLignesNomatr(javax.servlet.http.HttpServletRequest request, boolean initSelect) throws Exception{
 
-	java.util.ArrayList<Salaire> a = new ArrayList<>();
+	java.util.ArrayList<Salaire> a = new ArrayList<Salaire>();
 	
 	if (getSalaireNegatifCourant() != null) {
 		//Recherche des Administrations
@@ -702,7 +702,7 @@ private void initialiseListeLignesNomatr(javax.servlet.http.HttpServletRequest r
  */
 private void initialiseListeLignesPossibles(javax.servlet.http.HttpServletRequest request, boolean initSelect) throws Exception{
 
-	java.util.ArrayList<Salaire> a = new ArrayList<>();
+	java.util.ArrayList<Salaire> a = new ArrayList<Salaire>();
 	
 	if (getSalaireNomatrCourant() != null) {
 		//Recherche des Administrations

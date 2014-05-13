@@ -51,7 +51,7 @@ public class LignesNegativesRobot extends Robot {
 	 * @see nc.mairie.robot.Robot#initialiseNavigation()
 	 */
 	protected Hashtable<String, String> initialiseNavigation() {
-		java.util.Hashtable<String, String> navigation = new java.util.Hashtable<>();
+		java.util.Hashtable<String, String> navigation = new java.util.Hashtable<String, String>();
 		
 		//Classe GestionLignesNegatives
 		navigation.put(GestionLignesNegatives.class.getName()+GestionLignesNegatives.STATUT_RECETTE,GestionLogLignesNegatives.class.getName());
