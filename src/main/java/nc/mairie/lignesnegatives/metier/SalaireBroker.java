@@ -98,7 +98,7 @@ public java.util.ArrayList<Salaire> listerSalaireNegatif(nc.mairie.technique.Tra
 			
 			" select NUMCPTE, s.idetbs, noacti, codfon, refemp, sum(montnt) as summontant, e.enscom, cdchai" +
 			" from "+bib+"."+getTable()+" s" +
-			" inner join mairie.sietbs e on e.idetbs = s.idetbs" +
+			" inner join mairie.gftiers e on e.idetbs = s.idetbs" +
 			" group by numcpte, s.idetbs, noacti, codfon, refemp, e.enscom, cdchai" +
 			" having sum(montnt) < 0");
 			
@@ -113,7 +113,7 @@ public java.util.ArrayList<Salaire> listerSalaireNegatifFromSalaireNegatif(nc.ma
 			
 			" select nomatr, NUMCPTE, s.idetbs, noacti, codfon, refemp, montnt, e.enscom, cdchai" +
 			" from "+bib+"."+getTable()+" s" +
-			" inner join mairie.sietbs e on e.idetbs = s.idetbs" +
+			" inner join mairie.gftiers e on e.idetbs = s.idetbs" +
 			" where" + 
 			" numcpte = '"+numcpte+ "' and "+
 			" s.idetbs = "+idetbs+ " and "+
@@ -134,7 +134,7 @@ public java.util.ArrayList<Salaire> listerSalairePossiblesFromSalaireMatricule(n
 			
 			" select NUMCPTE, s.idetbs, noacti, codfon, refemp, sum(montnt) as summontant, e.enscom, cdchai" +
 			" from "+bib+"."+getTable()+" s" +
-			" inner join mairie.sietbs e on e.idetbs = s.idetbs" +
+			" inner join mairie.gftiers e on e.idetbs = s.idetbs" +
 			" where numcpte = '"+numcpte+"' and "+
 			" s.idetbs = "+idetbs+
 			" group by numcpte, s.idetbs, noacti, codfon, refemp, e.enscom, cdchai" +
