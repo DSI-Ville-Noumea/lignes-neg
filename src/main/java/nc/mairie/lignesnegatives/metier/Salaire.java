@@ -4,17 +4,17 @@ package nc.mairie.lignesnegatives.metier;
  * Objet métier Salaire
  */
 public class Salaire extends nc.mairie.technique.BasicMetier {
-	public String nomatr;
-	public String numcpte;
-	public String codfon;
-	public String noacti;
-	public String montnt;
-	public String idetbs;
-	public String refemp;
+	private String nomatr;
+	private String numcpte;
+	private String codfon;
+	private String noacti;
+	private String montnt;
+	private String idetbs;
+	private String refemp;
 	
-	public String summontant;
-	public String enscom;
-	public String cdchai;
+	private String summontant;
+	private String enscom;
+	private String cdchai;
 	
 /**
  * Constructeur Salaire.
@@ -24,72 +24,84 @@ public Salaire() {
 }
 /**
  * Getter de l'attribut nomatr.
+  * @return String
  */
 public String getNomatr() {
 	return nomatr;
 }
 /**
  * Setter de l'attribut nomatr.
+  * @param newNomatr newNomatr
  */
 public void setNomatr(String newNomatr) { 
 	nomatr = newNomatr;
 }
 /**
  * Getter de l'attribut numcpte.
+  * @return String
  */
 public String getNumcpte() {
 	return numcpte;
 }
 /**
  * Setter de l'attribut numcpte.
+  * @param newNumcpte newNumcpte
  */
 public void setNumcpte(String newNumcpte) { 
 	numcpte = newNumcpte;
 }
 /**
  * Getter de l'attribut codfon.
+  * @return String
  */
 public String getCodfon() {
 	return codfon;
 }
 /**
  * Setter de l'attribut codfon.
+  * @param newCodfon newCodfon
  */
 public void setCodfon(String newCodfon) { 
 	codfon = newCodfon;
 }
 /**
  * Getter de l'attribut noacti.
+  * @return String
  */
 public String getNoacti() {
 	return noacti;
 }
 /**
  * Setter de l'attribut noacti.
+  * @param newNoacti newNoacti
  */
 public void setNoacti(String newNoacti) { 
 	noacti = newNoacti;
 }
 /**
  * Getter de l'attribut montnt.
+  * @return String
  */
 public String getMontnt() {
 	return montnt;
 }
 /**
  * Setter de l'attribut montnt.
+  * @param newMontnt newMontnt
  */
 public void setMontnt(String newMontnt) { 
 	montnt = newMontnt;
 }
 /**
  * Getter de l'attribut idetbs.
+  * @return String
  */
 public String getIdetbs() {
 	return idetbs;
 }
 /**
  * Setter de l'attribut idetbs.
+  * @param newIdetbs newIdetbs
  */
 public void setIdetbs(String newIdetbs) { 
 	idetbs = newIdetbs;
@@ -126,7 +138,8 @@ protected nc.mairie.technique.BasicBroker definirMyBroker() {
 }
 /**
  Methode à définir dans chaque objet Métier pour instancier un Broker 
-*/
+ * @return SalaireBroker
+ */
 protected SalaireBroker getMySalaireBroker() {
 	return (SalaireBroker)getMyBasicBroker();
 }
@@ -141,7 +154,10 @@ public String toString() {
 }
 /**
  * Retourne un ArrayList d'objet métier : Salaire.
+ * @param aTransaction aTransaction
+ * @param bib bib
  * @return java.util.ArrayList
+ * @throws Exception Exception
  */
 public static java.util.ArrayList<Salaire> listerSalaireNegatif(nc.mairie.technique.Transaction aTransaction, String bib) throws Exception{
 	Salaire unSalaire = new Salaire();
@@ -149,7 +165,11 @@ public static java.util.ArrayList<Salaire> listerSalaireNegatif(nc.mairie.techni
 }
 /**
  * Retourne un ArrayList d'objet métier : Salaire.
+ * @param aTransaction aTransaction
+ * @param aSalaire aSalaire
+ * @param bib bib
  * @return java.util.ArrayList
+ * @throws Exception Exception
  */
 public static java.util.ArrayList<Salaire> listerSalaireNegatifFromSalaireNegatif(nc.mairie.technique.Transaction aTransaction, Salaire aSalaire, String bib) throws Exception{
 	Salaire unSalaire = new Salaire();
@@ -157,7 +177,11 @@ public static java.util.ArrayList<Salaire> listerSalaireNegatifFromSalaireNegati
 }
 /**
  * Retourne un ArrayList d'objet métier : Salaire.
+ * @param aTransaction aTransaction
+ * @param aSalaire aSalaire
+ * @param bib bib
  * @return java.util.ArrayList
+ * @throws Exception Exception
  */
 public static java.util.ArrayList<Salaire> listerSalairePossiblesFromSalaireMatricule(nc.mairie.technique.Transaction aTransaction, Salaire aSalaire, String bib) throws Exception{
 	Salaire unSalaire = new Salaire();
@@ -165,7 +189,10 @@ public static java.util.ArrayList<Salaire> listerSalairePossiblesFromSalaireMatr
 }
 /**
  * Retourne un Salaire.
+ * @param aTransaction aTransaction
+ * @param code code
  * @return Salaire
+ * @throws Exception Exception
  */
 public static Salaire chercherSalaire(nc.mairie.technique.Transaction aTransaction, String code) throws Exception{
 	Salaire unSalaire = new Salaire();
@@ -174,6 +201,11 @@ public static Salaire chercherSalaire(nc.mairie.technique.Transaction aTransacti
 /**
  * Methode modifierObjetMetier qui retourne
  * true ou false
+ * @param aTransaction aTransaction
+ * @param aSalairePossible aSalairePossible
+ * @param bib bib
+ * @return boolean
+ * @throws Exception Exception
  */
 public boolean modifierSalaire(nc.mairie.technique.Transaction aTransaction, Salaire aSalairePossible, String bib) throws Exception {
 	//Modification du Salaire
@@ -182,6 +214,10 @@ public boolean modifierSalaire(nc.mairie.technique.Transaction aTransaction, Sal
 /**
  * Methode supprimerObjetMetier qui retourne
  * true ou false
+ * @param aTransaction aTransaction
+ * @param bib bib
+ * @return boolean
+ * @throws Exception Exception
  */
 public boolean supprimerSalaire(nc.mairie.technique.Transaction aTransaction, String bib) throws Exception{
 	//Suppression de l'Salaire

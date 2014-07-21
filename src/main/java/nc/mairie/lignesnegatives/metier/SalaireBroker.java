@@ -7,6 +7,7 @@ import nc.mairie.technique.BasicRecord;
 public class SalaireBroker extends nc.mairie.technique.BasicBroker {
 /**
  * Constructeur SalaireBroker.
+ * @param aMetier aMetier
  */
 public SalaireBroker(nc.mairie.technique.BasicMetier aMetier) {
 	super(aMetier);
@@ -51,6 +52,20 @@ protected java.util.Hashtable<String, BasicRecord> definirMappageTable() throws 
 /**
  * Methode supprimerObjetMetierBroker qui retourne
  * true ou false
+ * @param aTransaction aTransaction
+ * @param nomatr nomatr
+ * @param numcpte numcpte
+ * @param idetbs idetbs
+ * @param noacti noacti
+ * @param codfon codfon
+ * @param refemp refemp
+ * @param montnt montnt
+ * @param newNoacti newNoacti
+ * @param newCodeFon newCodeFon
+ * @param newRefemp newRefemp
+ * @param bib bib
+ * @return boolean
+ * @throws Exception Exception 
  */
 public boolean modifierSalaire(nc.mairie.technique.Transaction aTransaction, String nomatr, String numcpte, String idetbs, String noacti, String codfon, String refemp, String montnt, String newNoacti, String newCodeFon, String newRefemp, String bib) throws java.lang.Exception {
 	String clauseWhere = " where nomatr = "+nomatr+" and "+
@@ -74,6 +89,17 @@ public boolean modifierSalaire(nc.mairie.technique.Transaction aTransaction, Str
 /**
  * Methode supprimerObjetMetierBroker qui retourne
  * true ou false
+ * @param aTransaction aTransaction
+ * @param nomatr nomatr
+ * @param numcpte numcpte
+ * @param idetbs idetbs
+ * @param noacti noacti
+ * @param codfon codfon
+ * @param refemp refemp
+ * @param montnt montnt
+ * @param bib bib
+ * @return boolean
+ * @throws Exception Exception 
  */
 public boolean supprimerSalaire(nc.mairie.technique.Transaction aTransaction, String nomatr, String numcpte, String idetbs, String noacti, String codfon, String refemp, String montnt, String bib) throws java.lang.Exception {
 	String clauseWhere = " where nomatr = "+nomatr+" and "+
@@ -106,7 +132,15 @@ public java.util.ArrayList<Salaire> listerSalaireNegatif(nc.mairie.technique.Tra
 }
 /**
  * Retourne un ArrayList d'objet métier : Salaire.
+ * @param aTransaction aTransaction
+ * @param numcpte numcpte
+ * @param idetbs idetbs
+ * @param noacti noacti
+ * @param codfon codfon
+ * @param refemp refemp
+ * @param bib bib
  * @return java.util.ArrayList
+ * @throws Exception Exception
  */
 public java.util.ArrayList<Salaire> listerSalaireNegatifFromSalaireNegatif(nc.mairie.technique.Transaction aTransaction, String numcpte, String idetbs, String noacti, String codfon, String refemp, String bib) throws Exception {
 	return executeSelectListe(aTransaction,
@@ -127,7 +161,14 @@ public java.util.ArrayList<Salaire> listerSalaireNegatifFromSalaireNegatif(nc.ma
 }
 /**
  * Retourne un ArrayList d'objet métier : Salaire.
+ * @param aTransaction aTransaction
+ * @param nomatr nomatr
+ * @param numcpte numcpte
+ * @param idetbs idetbs
+ * @param montnt montnt
+ * @param bib bib
  * @return java.util.ArrayList
+ * @throws Exception Exception
  */
 public java.util.ArrayList<Salaire> listerSalairePossiblesFromSalaireMatricule(nc.mairie.technique.Transaction aTransaction, String nomatr, String numcpte, String idetbs, String montnt, String bib) throws Exception {
 	return executeSelectListe(aTransaction,
@@ -145,7 +186,10 @@ public java.util.ArrayList<Salaire> listerSalairePossiblesFromSalaireMatricule(n
 
 /**
  * Retourne un Salaire.
+ * @param aTransaction aTransaction
+ * @param cle cle
  * @return Salaire
+ * @throws Exception Exception
  */
 public Salaire chercherSalaire(nc.mairie.technique.Transaction aTransaction, String cle) throws Exception {
 	return (Salaire)executeSelect(aTransaction,"select * from "+getTable()+" where CODE = "+cle+"");

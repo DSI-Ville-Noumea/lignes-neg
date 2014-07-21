@@ -77,6 +77,7 @@ public void initialiseZones(javax.servlet.http.HttpServletRequest request) throw
  * ST_ACTION
  * Date de création : (28/04/03 11:26:32)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String getVAL_ST_ACTION() {
 	return getZone(getNOM_ST_ACTION());
@@ -86,6 +87,7 @@ public java.lang.String getVAL_ST_ACTION() {
  * ST_ACTION
  * Date de création : (28/04/03 11:26:32)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String getNOM_ST_ACTION() {
 	return "NOM_ST_ACTION";
@@ -103,6 +105,7 @@ public GestionLignesNegatives() {
  * PB_ANNULER
  * Date de création : (11/05/06 11:23:48)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String getNOM_PB_ANNULER() {
 	return "NOM_PB_ANNULER";
@@ -114,6 +117,9 @@ public java.lang.String getNOM_PB_ANNULER() {
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
  * Date de création : (11/05/06 11:23:48)
  * @author : Générateur de process
+  * @param request request
+ * @return boolean
+ * @throws Exception Exception
  */
 public boolean performPB_ANNULER(javax.servlet.http.HttpServletRequest request) throws Exception {
 	
@@ -126,6 +132,7 @@ public boolean performPB_ANNULER(javax.servlet.http.HttpServletRequest request) 
  * PB_BIBLIOTHEQUE
  * Date de création : (11/05/06 11:23:48)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String getNOM_PB_BIBLIOTHEQUE() {
 	return "NOM_PB_BIBLIOTHEQUE";
@@ -137,6 +144,9 @@ public java.lang.String getNOM_PB_BIBLIOTHEQUE() {
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
  * Date de création : (11/05/06 11:23:48)
  * @author : Générateur de process
+  * @param request request
+ * @return boolean
+ * @throws Exception Exception
  */
 public boolean performPB_BIBLIOTHEQUE(javax.servlet.http.HttpServletRequest request) throws Exception {
 
@@ -155,6 +165,7 @@ public boolean performPB_BIBLIOTHEQUE(javax.servlet.http.HttpServletRequest requ
  * PB_LIGNES_NEG
  * Date de création : (11/05/06 11:23:48)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String getNOM_PB_LIGNES_NEG() {
 	return "NOM_PB_LIGNES_NEG";
@@ -166,6 +177,9 @@ public java.lang.String getNOM_PB_LIGNES_NEG() {
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
  * Date de création : (11/05/06 11:23:48)
  * @author : Générateur de process
+  * @param request request
+ * @return boolean
+ * @throws Exception Exception
  */
 public boolean performPB_LIGNES_NEG(javax.servlet.http.HttpServletRequest request) throws Exception {
 	//	On récupère la ligne
@@ -185,6 +199,7 @@ public boolean performPB_LIGNES_NEG(javax.servlet.http.HttpServletRequest reques
  * PB_LIGNES_NOMATR
  * Date de création : (11/05/06 11:23:48)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String getNOM_PB_LIGNES_NOMATR() {
 	return "NOM_PB_LIGNES_NOMATR";
@@ -194,6 +209,7 @@ public java.lang.String getNOM_PB_LIGNES_NOMATR() {
  * PB_MODIFIER
  * Date de création : (11/05/06 11:23:48)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String getNOM_PB_MODIFIER() {
 	return "NOM_PB_MODIFIER";
@@ -205,6 +221,9 @@ public java.lang.String getNOM_PB_MODIFIER() {
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
  * Date de création : (11/05/06 11:23:48)
  * @author : Générateur de process
+  * @param request request
+ * @return boolean
+ * @throws Exception Exception
  */
 public boolean performPB_MODIFIER(javax.servlet.http.HttpServletRequest request) throws Exception {
 	
@@ -222,6 +241,9 @@ public boolean performPB_MODIFIER(javax.servlet.http.HttpServletRequest request)
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
  * Date de création : (11/05/06 11:23:48)
  * @author : Générateur de process
+  * @param request request
+ * @return boolean
+ * @throws Exception Exception
  */
 public boolean performPB_LIGNES_NOMATR(javax.servlet.http.HttpServletRequest request) throws Exception {
 	//	On récupère la ligne
@@ -238,6 +260,7 @@ public boolean performPB_LIGNES_NOMATR(javax.servlet.http.HttpServletRequest req
  * PB_SUPPRIMER
  * Date de création : (11/05/06 11:23:48)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String getNOM_PB_SUPPRIMER() {
 	return "NOM_PB_SUPPRIMER";
@@ -249,6 +272,9 @@ public java.lang.String getNOM_PB_SUPPRIMER() {
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
  * Date de création : (11/05/06 11:23:48)
  * @author : Générateur de process
+  * @param request request
+ * @return boolean
+ * @throws Exception Exception
  */
 public boolean performPB_SUPPRIMER(javax.servlet.http.HttpServletRequest request) throws Exception {
 	//	action
@@ -260,6 +286,7 @@ public boolean performPB_SUPPRIMER(javax.servlet.http.HttpServletRequest request
  * PB_VALIDER
  * Date de création : (11/05/06 11:23:48)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String getNOM_PB_VALIDER() {
 	return "NOM_PB_VALIDER";
@@ -271,6 +298,9 @@ public java.lang.String getNOM_PB_VALIDER() {
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
  * Date de création : (11/05/06 11:23:48)
  * @author : Générateur de process
+  * @param request request
+ * @return boolean
+ * @throws Exception Exception
  */
 public boolean performPB_VALIDER(javax.servlet.http.HttpServletRequest request) throws Exception {
 	
@@ -374,6 +404,7 @@ private void setLB_BIBLIOTHEQUE(java.lang.String[] newLB_BIBLIOTHEQUE) {
  * NOM_LB_BIBLIOTHEQUE
  * Date de création : (11/05/06 11:23:48)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String getNOM_LB_BIBLIOTHEQUE() {
 	return "NOM_LB_BIBLIOTHEQUE";
@@ -383,6 +414,7 @@ public java.lang.String getNOM_LB_BIBLIOTHEQUE() {
  * NOM_LB_BIBLIOTHEQUE_SELECT
  * Date de création : (11/05/06 11:23:48)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String getNOM_LB_BIBLIOTHEQUE_SELECT() {
 	return "NOM_LB_BIBLIOTHEQUE_SELECT";
@@ -393,6 +425,7 @@ public java.lang.String getNOM_LB_BIBLIOTHEQUE_SELECT() {
  * LB_BIBLIOTHEQUE
  * Date de création : (11/05/06 11:23:48)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String [] getVAL_LB_BIBLIOTHEQUE() {
 	return getLB_BIBLIOTHEQUE();
@@ -403,6 +436,7 @@ public java.lang.String [] getVAL_LB_BIBLIOTHEQUE() {
  * LB_BIBLIOTHEQUE
  * Date de création : (11/05/06 11:23:48)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String getVAL_LB_BIBLIOTHEQUE_SELECT() {
 	return getZone(getNOM_LB_BIBLIOTHEQUE_SELECT());
@@ -432,6 +466,7 @@ private void setLB_LIGNES_NEG(java.lang.String[] newLB_LIGNES_NEG) {
  * NOM_LB_LIGNES_NEG
  * Date de création : (11/05/06 11:23:48)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String getNOM_LB_LIGNES_NEG() {
 	return "NOM_LB_LIGNES_NEG";
@@ -441,6 +476,7 @@ public java.lang.String getNOM_LB_LIGNES_NEG() {
  * NOM_LB_LIGNES_NEG_SELECT
  * Date de création : (11/05/06 11:23:48)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String getNOM_LB_LIGNES_NEG_SELECT() {
 	return "NOM_LB_LIGNES_NEG_SELECT";
@@ -451,6 +487,7 @@ public java.lang.String getNOM_LB_LIGNES_NEG_SELECT() {
  * LB_LIGNES_NEG
  * Date de création : (11/05/06 11:23:48)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String [] getVAL_LB_LIGNES_NEG() {
 	return getLB_LIGNES_NEG();
@@ -461,6 +498,7 @@ public java.lang.String [] getVAL_LB_LIGNES_NEG() {
  * LB_LIGNES_NEG
  * Date de création : (11/05/06 11:23:48)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String getVAL_LB_LIGNES_NEG_SELECT() {
 	return getZone(getNOM_LB_LIGNES_NEG_SELECT());
@@ -490,6 +528,7 @@ private void setLB_LIGNES_NOMATR(java.lang.String[] newLB_LIGNES_NOMATR) {
  * NOM_LB_LIGNES_NOMATR
  * Date de création : (11/05/06 11:23:48)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String getNOM_LB_LIGNES_NOMATR() {
 	return "NOM_LB_LIGNES_NOMATR";
@@ -499,6 +538,7 @@ public java.lang.String getNOM_LB_LIGNES_NOMATR() {
  * NOM_LB_LIGNES_NOMATR_SELECT
  * Date de création : (11/05/06 11:23:48)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String getNOM_LB_LIGNES_NOMATR_SELECT() {
 	return "NOM_LB_LIGNES_NOMATR_SELECT";
@@ -509,6 +549,7 @@ public java.lang.String getNOM_LB_LIGNES_NOMATR_SELECT() {
  * LB_LIGNES_NOMATR
  * Date de création : (11/05/06 11:23:48)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String [] getVAL_LB_LIGNES_NOMATR() {
 	return getLB_LIGNES_NOMATR();
@@ -519,6 +560,7 @@ public java.lang.String [] getVAL_LB_LIGNES_NOMATR() {
  * LB_LIGNES_NOMATR
  * Date de création : (11/05/06 11:23:48)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String getVAL_LB_LIGNES_NOMATR_SELECT() {
 	return getZone(getNOM_LB_LIGNES_NOMATR_SELECT());
@@ -548,6 +590,7 @@ private void setLB_LIGNES_POSSIBLES(java.lang.String[] newLB_LIGNES_POSSIBLES) {
  * NOM_LB_LIGNES_POSSIBLES
  * Date de création : (11/05/06 11:23:48)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String getNOM_LB_LIGNES_POSSIBLES() {
 	return "NOM_LB_LIGNES_POSSIBLES";
@@ -557,6 +600,7 @@ public java.lang.String getNOM_LB_LIGNES_POSSIBLES() {
  * NOM_LB_LIGNES_POSSIBLES_SELECT
  * Date de création : (11/05/06 11:23:48)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String getNOM_LB_LIGNES_POSSIBLES_SELECT() {
 	return "NOM_LB_LIGNES_POSSIBLES_SELECT";
@@ -567,6 +611,7 @@ public java.lang.String getNOM_LB_LIGNES_POSSIBLES_SELECT() {
  * LB_LIGNES_POSSIBLES
  * Date de création : (11/05/06 11:23:48)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String [] getVAL_LB_LIGNES_POSSIBLES() {
 	return getLB_LIGNES_POSSIBLES();
@@ -577,6 +622,7 @@ public java.lang.String [] getVAL_LB_LIGNES_POSSIBLES() {
  * LB_LIGNES_POSSIBLES
  * Date de création : (11/05/06 11:23:48)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String getVAL_LB_LIGNES_POSSIBLES_SELECT() {
 	return getZone(getNOM_LB_LIGNES_POSSIBLES_SELECT());
@@ -843,6 +889,7 @@ public String getJSP() {
  * PB_RECETTE
  * Date de création : (19/06/06 15:33:22)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String getNOM_PB_RECETTE() {
 	return "NOM_PB_RECETTE";
@@ -854,6 +901,9 @@ public java.lang.String getNOM_PB_RECETTE() {
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
  * Date de création : (19/06/06 15:33:22)
  * @author : Générateur de process
+  * @param request request
+ * @return boolean
+ * @throws Exception Exception
  */
 public boolean performPB_RECETTE(javax.servlet.http.HttpServletRequest request) throws Exception {
 	setStatut(STATUT_RECETTE,false);

@@ -7,6 +7,7 @@ import nc.mairie.technique.BasicRecord;
 public class LigNegLogBroker extends nc.mairie.technique.BasicBroker {
 /**
  * Constructeur LigNegLogBroker.
+ * @param aMetier aMetier
  */
 public LigNegLogBroker(nc.mairie.technique.BasicMetier aMetier) {
 	super(aMetier);
@@ -45,13 +46,19 @@ protected java.util.Hashtable<String, BasicRecord> definirMappageTable() throws 
 /**
  * Methode creerObjetMetierBroker qui retourne
  * true ou false
+ * @param aTransaction aTransaction
+ * @return boolean
+ * @throws Exception Exception
  */
 public boolean creerLigNegLog(nc.mairie.technique.Transaction aTransaction)  throws Exception{
 	return creer(aTransaction);
 }
 /**
  * Retourne un ArrayList d'objet métier : LigNegLog.
+ * @param aTransaction aTransaction
+ * @param bib bib
  * @return java.util.ArrayList
+ * @throws Exception Exception
  */
 public java.util.ArrayList<LigNegLog> listerLigNegLogPourTitreRecette(nc.mairie.technique.Transaction aTransaction, String bib) throws Exception {
 	return executeSelectListe(aTransaction,
@@ -63,7 +70,12 @@ public java.util.ArrayList<LigNegLog> listerLigNegLogPourTitreRecette(nc.mairie.
 }
 /**
  * Retourne un ArrayList d'objet métier : LigNegLog.
+ * @param aTransaction aTransaction
+ * @param bib bib
+ * @param chaine chaine
+ * @param percou percou
  * @return java.util.ArrayList
+ * @throws Exception Exception
  */
 public java.util.ArrayList<LigNegLog> listerLigNegLogChainePercou(nc.mairie.technique.Transaction aTransaction, String bib, String chaine, String percou) throws Exception {
 	return executeSelectListe(aTransaction,

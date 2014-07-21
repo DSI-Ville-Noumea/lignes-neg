@@ -130,6 +130,7 @@ public String getJSP() {
  * PB_CHAINE_PERCOU
  * Date de création : (19/06/06 15:40:21)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String getNOM_PB_CHAINE_PERCOU() {
 	return "NOM_PB_CHAINE_PERCOU";
@@ -141,6 +142,9 @@ public java.lang.String getNOM_PB_CHAINE_PERCOU() {
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
  * Date de création : (19/06/06 15:40:21)
  * @author : Générateur de process
+ * @param request request
+ * @return boolean
+ * @throws Exception Exception
  */
 public boolean performPB_CHAINE_PERCOU(javax.servlet.http.HttpServletRequest request) throws Exception {
 	//On récupère la ligne
@@ -177,6 +181,7 @@ private void setLB_CHAINE_PERCOU(java.lang.String[] newLB_CHAINE_PERCOU) {
  * NOM_LB_CHAINE_PERCOU
  * Date de création : (19/06/06 15:40:21)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String getNOM_LB_CHAINE_PERCOU() {
 	return "NOM_LB_CHAINE_PERCOU";
@@ -186,6 +191,7 @@ public java.lang.String getNOM_LB_CHAINE_PERCOU() {
  * NOM_LB_CHAINE_PERCOU_SELECT
  * Date de création : (19/06/06 15:40:21)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String getNOM_LB_CHAINE_PERCOU_SELECT() {
 	return "NOM_LB_CHAINE_PERCOU_SELECT";
@@ -196,6 +202,7 @@ public java.lang.String getNOM_LB_CHAINE_PERCOU_SELECT() {
  * LB_CHAINE_PERCOU
  * Date de création : (19/06/06 15:40:21)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String [] getVAL_LB_CHAINE_PERCOU() {
 	return getLB_CHAINE_PERCOU();
@@ -206,6 +213,7 @@ public java.lang.String [] getVAL_LB_CHAINE_PERCOU() {
  * LB_CHAINE_PERCOU
  * Date de création : (19/06/06 15:40:21)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String getVAL_LB_CHAINE_PERCOU_SELECT() {
 	return getZone(getNOM_LB_CHAINE_PERCOU_SELECT());
@@ -215,6 +223,7 @@ public java.lang.String getVAL_LB_CHAINE_PERCOU_SELECT() {
  * NOM_LB_PERCOU
  * Date de création : (19/06/06 15:40:21)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String getNOM_LB_PERCOU() {
 	return "NOM_LB_PERCOU";
@@ -224,6 +233,7 @@ public java.lang.String getNOM_LB_PERCOU() {
  * NOM_LB_PERCOU_SELECT
  * Date de création : (19/06/06 15:40:21)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String getNOM_LB_PERCOU_SELECT() {
 	return "NOM_LB_PERCOU_SELECT";
@@ -234,6 +244,7 @@ public java.lang.String getNOM_LB_PERCOU_SELECT() {
  * LB_PERCOU
  * Date de création : (19/06/06 15:40:21)
  * @author : Générateur de process
+  * @return String
  */
 public java.lang.String getVAL_LB_PERCOU_SELECT() {
 	return getZone(getNOM_LB_PERCOU_SELECT());

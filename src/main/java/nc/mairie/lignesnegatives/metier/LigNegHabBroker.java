@@ -7,6 +7,7 @@ import nc.mairie.technique.BasicRecord;
 public class LigNegHabBroker extends nc.mairie.technique.BasicBroker {
 /**
  * Constructeur LigNegHabBroker.
+ * @param aMetier aMetier 
  */
 public LigNegHabBroker(nc.mairie.technique.BasicMetier aMetier) {
 	super(aMetier);
@@ -39,7 +40,9 @@ protected java.util.Hashtable<String, BasicRecord> definirMappageTable() throws 
 }
 /**
  * Retourne un ArrayList d'objet métier : LigNegHab.
+ * @param aTransaction aTransaction
  * @return java.util.ArrayList
+ * @throws Exception Exception
  */
 public java.util.ArrayList<LigNegHab> listerLigNegHab(nc.mairie.technique.Transaction aTransaction) throws Exception {
 	return executeSelectListe(aTransaction,"select * from "+getTable()+"");

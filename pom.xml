@@ -19,15 +19,6 @@
 				<role>Développeur</role>
 			</roles>
 		</developer>
-		<developer>
-			<id>DOSFR75</id>
-			<name>Frédéric DOS SANTOS</name>
-			<email>dosfr75@ville-noumea.nc</email>
-			<url>svpatdi/annuaire/vcards/904445.vcf</url>
-			<roles>
-				<role>Correcteur</role>
-			</roles>
-		</developer>
 	</developers>
 
 
@@ -200,11 +191,12 @@
 							<artifactId>maven-changelog-plugin</artifactId>
 							<version>2.2</version>
 						</plugin>
-						<plugin>
-							<groupId>org.codehaus.mojo</groupId>
-							<artifactId>findbugs-maven-plugin</artifactId>
-							<version>2.4.0</version>
-						</plugin>
+<!-- 						Fingbugs Nom compatible avec java 1.8 -->
+<!-- 						<plugin> -->
+<!-- 							<groupId>org.codehaus.mojo</groupId> -->
+<!-- 							<artifactId>findbugs-maven-plugin</artifactId> -->
+<!-- 							<version>2.4.0</version> -->
+<!-- 						</plugin> -->
 					</reportPlugins>
 				</configuration>
 			</plugin>

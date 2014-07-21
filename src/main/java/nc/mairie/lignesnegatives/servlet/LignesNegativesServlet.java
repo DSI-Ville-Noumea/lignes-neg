@@ -39,7 +39,6 @@ public class LignesNegativesServlet extends Frontale {
 	/**
 	 * Insérez la description de la méthode à cet endroit.
 	 *  Date de création : (22/02/2002 10:51:46)
-	 * @return fr.averse.servlets.Contexte
 	 */
 	protected void initialiseAutresParametres() {
 		super.initialiseAutresParametres();

@@ -4,7 +4,7 @@ package nc.mairie.lignesnegatives.metier;
  * Objet métier LigNegHab
  */
 public class LigNegHab extends nc.mairie.technique.BasicMetier {
-	public String username;
+	private String username;
 /**
  * Constructeur LigNegHab.
  */
@@ -13,12 +13,14 @@ public LigNegHab() {
 }
 /**
  * Getter de l'attribut username.
+ * @return String
  */
 public String getUsername() {
 	return username;
 }
 /**
  * Setter de l'attribut username.
+ * @param newUsername newUsername
  */
 public void setUsername(String newUsername) { 
 	username = newUsername;
@@ -31,6 +33,7 @@ protected nc.mairie.technique.BasicBroker definirMyBroker() {
 }
 /**
  Methode à définir dans chaque objet Métier pour instancier un Broker 
+ * @return LigNegHabBroker
 */
 protected LigNegHabBroker getMyLigNegHabBroker() {
 	return (LigNegHabBroker)getMyBasicBroker();
@@ -46,7 +49,9 @@ public String toString() {
 }
 /**
  * Retourne un ArrayList d'objet métier : LigNegHab.
+ * @param aTransaction aTransaction
  * @return java.util.ArrayList
+ * @throws Exception Exception
  */
 public static java.util.ArrayList<LigNegHab> listerLigNegHab(nc.mairie.technique.Transaction aTransaction) throws Exception{
 	LigNegHab unLigNegHab = new LigNegHab();
