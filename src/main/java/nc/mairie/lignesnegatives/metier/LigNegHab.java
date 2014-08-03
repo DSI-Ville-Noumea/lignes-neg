@@ -4,7 +4,7 @@ package nc.mairie.lignesnegatives.metier;
  * Objet métier LigNegHab
  */
 public class LigNegHab extends nc.mairie.technique.BasicMetier {
-	private String username;
+	public String username;
 /**
  * Constructeur LigNegHab.
  */

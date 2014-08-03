@@ -4,12 +4,12 @@ package nc.mairie.lignesnegatives.metier;
  * Objet métier LigNegLog
  */
 public class LigNegLog extends nc.mairie.technique.BasicMetier {
-	private String user;
-	private String bib;
-	private String chaine;
-	private String action;
-	private String dateaction;
-	private String libelleaction;
+	public String user;
+	public String bib;
+	public String chaine;
+	public String action;
+	public String dateaction;
+	public String libelleaction;
 /**
  * Constructeur LigNegLog.
  */

@@ -4,17 +4,17 @@ package nc.mairie.lignesnegatives.metier;
  * Objet métier Salaire
  */
 public class Salaire extends nc.mairie.technique.BasicMetier {
-	private String nomatr;
-	private String numcpte;
-	private String codfon;
-	private String noacti;
-	private String montnt;
-	private String idetbs;
-	private String refemp;
+	public String nomatr;
+	public String numcpte;
+	public String codfon;
+	public String noacti;
+	public String montnt;
+	public String idetbs;
+	public String refemp;
 	
-	private String summontant;
-	private String enscom;
-	private String cdchai;
+	public String summontant;
+	public String enscom;
+	public String cdchai;
 	
 /**
  * Constructeur Salaire.
