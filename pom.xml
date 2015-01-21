@@ -10,6 +10,17 @@
 		<url>http://www.ville-noumea.nc</url>
 	</organization>
 	<developers>
+	<developer>
+			<id>Boulu72</id>
+			<name>Luc BOURDIL</name>
+			<email>boulu72@ville-noumea.nc</email>
+			<url>svpatdi/annuaire/vcards/904117.vcf</url>
+			<roles>
+				<role>Chef de projet</role>
+				<role>Architecte logiciel</role>
+				<role>Développeur</role>
+			</roles>
+		</developer>
 		<developer>
 			<id>FONOL77</id>
 			<name>Olivier FONTENEAU</name>
@@ -33,7 +44,7 @@
 		<svnurl>https://svn.ville-noumea.nc/sed/lignes-neg</svnurl>
 		<java_version>${java.version}</java_version>
 		<java.version>1.7</java.version>
-		<framework_version>2.1</framework_version>
+		<framework_version>2.2</framework_version>
 	</properties>
 
 	<prerequisites>
@@ -60,7 +71,7 @@
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>servlet-api</artifactId>
-			<version>6.0.41</version>
+			<version>6.0.43</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
