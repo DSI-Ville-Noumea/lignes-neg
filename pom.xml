@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>nc.mairie</groupId>
 	<artifactId>ligneg</artifactId>
-	<version>1.4</version>
+	<version>1.5-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<organization>
 		<name>Mairie de Nouméa</name>
@@ -44,7 +44,7 @@
 		<svnurl>https://svn.ville-noumea.nc/sed/lignes-neg</svnurl>
 		<java_version>${java.version}</java_version>
 		<java.version>1.7</java.version>
-		<framework_version>2.2</framework_version>
+		<framework_version>2.3</framework_version>
 	</properties>
 
 	<prerequisites>
