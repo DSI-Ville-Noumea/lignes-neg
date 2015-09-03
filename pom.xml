@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>nc.mairie</groupId>
 	<artifactId>ligneg</artifactId>
-	<version>1.5</version>
+	<version>1.6-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<organization>
 		<name>Mairie de Nouméa</name>
@@ -71,7 +71,7 @@
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>servlet-api</artifactId>
-			<version>6.0.43</version>
+			<version>6.0.44</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -88,7 +88,7 @@
 		<dependency>
 			<groupId>net.sf.jt400</groupId>
 			<artifactId>jt400</artifactId>
-			<version>8.2</version>
+			<version>8.5</version>
 		</dependency>
 	</dependencies>
 
