@@ -29,7 +29,7 @@
 		timeBetweenEvictionRunsMillis="30000" maxActive="300" maxIdle="30"
 		maxWait="30000" initialSize="10" removeAbandonedTimeout="500"
 		removeAbandoned="true" logAbandoned="true" minEvictableIdleTimeMillis="30000"
-		jmxEnabled="true" username="***REMOVED***" password="***REMOVED***"
+		jmxEnabled="true" username="adminwas" password="planet"
 		driverClassName="com.ibm.as400.access.AS400JDBCDriver" url="jdbc:as400://noumea" />
 		
 		
@@ -38,13 +38,13 @@
 	<Parameter description="Environnement starjet (DVLP, TEST ou PROD)" name="STARJET_MODE" override="false" value="PROD" />
 	<Parameter description="Nom de l'application déclarée SIDRAP pour connaitre les droits" name="APPLICATION" override="false" value="LignesNegatives" />
 	<Parameter description="Critère de recherche LDAP" name="CRITERE_RECHERCHE_LDAP" override="false" value="samaccountname" />
-	<Parameter description="Admin LDAP" name="HOST_LDAP_ADMIN" override="false" value="cn=***REMOVED***,ou=WAS,ou=APPLI,ou=Z-users" />
-	<Parameter description="Hôte LDAP" name="HOST_LDAP" override="false" value="ldap://***REMOVED***:389/" />
+	<Parameter description="Admin LDAP" name="HOST_LDAP_ADMIN" override="false" value="cn=adminwas,ou=WAS,ou=APPLI,ou=Z-users" />
+	<Parameter description="Hôte LDAP" name="HOST_LDAP" override="false" value="ldap://hurle:389/" />
 	<Parameter description="Init CTX LDAP" name="INITCTX_LDAP" override="false" value="com.sun.jndi.ldap.LdapCtxFactory" />
-	<Parameter description="Mot de passe LDAP" name="HOST_LDAP_PASSWORD" override="false" value="***REMOVED***" />
+	<Parameter description="Mot de passe LDAP" name="HOST_LDAP_PASSWORD" override="false" value="planet" />
 	<Parameter description="Base LDAP" name="BASE_LDAP" override="false" value="dc=site-mairie,dc=noumea,dc=nc" />
-	<Parameter description="Hôte LDAP 3" name="HOST_LDAP3" override="false" value="ldap://***REMOVED***:389/" />
-	<Parameter description="Hôte LDAP 2" name="HOST_LDAP2" override="false" value="ldap://***REMOVED***:389/" />
+	<Parameter description="Hôte LDAP 3" name="HOST_LDAP3" override="false" value="ldap://netone:389/" />
+	<Parameter description="Hôte LDAP 2" name="HOST_LDAP2" override="false" value="ldap://gberge:389/" />
 	
     <!-- Uncomment this to disable session persistence across Tomcat restarts -->
     <!--
