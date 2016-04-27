@@ -53,7 +53,7 @@
 
     <scm>
         <connection>scm:git:git://${giturl}.git</connection>
-        <developerConnection>scm:git:git@github.com:DSI-Ville-Noumea/${name}.git</developerConnection>
+        <developerConnection>scm:git:git@github.com:DSI-Ville-Noumea/${project.name}.git</developerConnection>
         <url>https://${giturl}</url>
     </scm>
 
