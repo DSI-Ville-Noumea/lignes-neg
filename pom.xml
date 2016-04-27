@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>nc.mairie</groupId>
 	<artifactId>ligneg</artifactId>
-	<version>1.6</version>
+	<version>1.7-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<organization>
 		<name>Mairie de Nouméa</name>
@@ -33,7 +33,7 @@
 	</developers>
 
 
-	<name>ligneg</name>
+	<name>lignes-neg</name>
 	<url>file://///cristal/dsi$/DSI/PROJETS/2%20-%20ARCHIVES/2%20-%20M%C3%A9tiers/Lignes%20Negatives/Documentation_Agile/index.html</url>
 	<description>
 	LignesNegatives est l'application qui permet de gérer les lignes négatives générées lors du mandantement.
@@ -41,7 +41,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<svnurl>https://svn.ville-noumea.nc/sed/lignes-neg</svnurl>
+		<giturl>github.com/DSI-Ville-Noumea/lignes-neg</giturl>
 		<java_version>${java.version}</java_version>
 		<java.version>1.8</java.version>
 		<framework_version>2.3</framework_version>
@@ -51,13 +51,11 @@
   		<maven>2.2.1</maven>
 	</prerequisites>
 
-	<scm>
-		<connection>scm:svn:${svnurl}/trunk</connection>
-		<developerConnection>scm:svn:${svnurl}/trunk</developerConnection>
-		<url>${svnurl}/trunk</url>
-	</scm>
-
-
+    <scm>
+        <connection>scm:git:git://${giturl}.git</connection>
+        <developerConnection>scm:git:git@github.com:DSI-Ville-Noumea/${name}.git</developerConnection>
+        <url>https://${giturl}</url>
+    </scm>
 
 	<distributionManagement>
 		<site>
@@ -277,9 +275,9 @@
 				<artifactId>maven-project-info-reports-plugin</artifactId>
 				<version>2.7</version>
 				<configuration>
-					<webAccessUrl>https://dvlp.site-mairie.noumea.nc:8080/svn/lignes-neg/trunk</webAccessUrl>
-					<anonymousConnection>scm:svn:https://dvlp.site-mairie.noumea.nc:8080/svn/lignes-neg/trunk</anonymousConnection>
-					<developerConnection>scm:svn:https://dvlp.site-mairie.noumea.nc:8080/svn/lignes-neg/trunk</developerConnection>
+					<webAccessUrl>https://${giturl}</webAccessUrl>
+					<anonymousConnection>scm:git:git:https://${giturl}.git</anonymousConnection>
+					<developerConnection>scm:git:git:https://${giturl}.git</developerConnection>
 				</configuration>
 				<reportSets>
 					<reportSet>
