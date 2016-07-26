@@ -87,7 +87,7 @@
 		<dependency>
 			<groupId>com.github.DSI-Ville-Noumea</groupId>
 			<artifactId>commun</artifactId>
-			<version>${commun.version}.</version>
+			<version>${commun.version}</version>
 		</dependency>
 
 		<dependency>
