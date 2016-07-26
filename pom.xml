@@ -46,10 +46,9 @@
 		<java.version>1.8</java.version>
 		<framework_version>framework-2.5</framework_version>
 		<commun.version>commun-1.5</commun.version>
-		<properties>
-	   <versioneye-maven-plugin.version>3.10.0</versioneye-maven-plugin.version>
-	   <versioneye-maven-plugin.apiKey>${env.VERSIONEYE_APIKEY}</versioneye-maven-plugin.apiKey>
-	   <versioneye-maven-plugin.projectId>${env.VERSIONEYE_PROJECTID}</versioneye-maven-plugin.projectId>
+		<versioneye-maven-plugin.version>3.10.0</versioneye-maven-plugin.version>
+		<versioneye-maven-plugin.apiKey>${env.VERSIONEYE_APIKEY}</versioneye-maven-plugin.apiKey>
+		<versioneye-maven-plugin.projectId>${env.VERSIONEYE_PROJECTID}</versioneye-maven-plugin.projectId>
 	</properties>
 
 	<prerequisites>
