@@ -124,9 +124,8 @@
 						<phase>package</phase>
 						<configuration>
 							<tasks>
-<!-- 								<copy todir="src/site/resources/${project.packaging}/${project.version}"  -->
-<!-- 									file="target/${project.artifactId}##${project.version}.war"> -->
 								<copy file="${project.build.directory}/${project.build.finalName}.${project.packaging}" tofile="src/site/resources/${project.packaging}/${project.version}/${project.artifactId}##${project.version}.${project.packaging}"/>
+								<copy file="${project.build.directory}/${project.build.finalName}.${project.packaging}" tofile="src/site/resources/${project.packaging}/${project.version}/ROOT##${project.artifactId}-${project.version}.${project.packaging}"/>
 								<checksum algorithm="md5">
 									<fileset dir="src/site/resources/${project.packaging}/${project.version}">
 										<include name="*.war"/>
