@@ -45,6 +45,7 @@
 		<java_version>${java.version}</java_version>
 		<java.version>1.8</java.version>
 		<framework_version>framework-2.5</framework_version>
+		<commun.version>commun-1.5</commun.version>
 	</properties>
 
 	<prerequisites>
@@ -86,7 +87,7 @@
 		<dependency>
 			<groupId>nc.mairie</groupId>
 			<artifactId>commun</artifactId>
-			<version>1.4</version>
+			<version>${commun.version}.</version>
 		</dependency>
 
 		<dependency>
