@@ -85,7 +85,7 @@
 			<version>${framework_version}</version>
 		</dependency>
 		<dependency>
-			<groupId>nc.mairie</groupId>
+			<groupId>com.github.DSI-Ville-Noumea</groupId>
 			<artifactId>commun</artifactId>
 			<version>${commun.version}.</version>
 		</dependency>
