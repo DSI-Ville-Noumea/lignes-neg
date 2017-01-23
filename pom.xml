@@ -46,7 +46,7 @@
 		<java.version>1.8</java.version>
 		<framework_version>framework-2.5</framework_version>
 		<commun.version>commun-1.5</commun.version>
-		<versioneye-maven-plugin.version>3.10.2</versioneye-maven-plugin.version>
+		<versioneye-maven-plugin.version>3.11.1</versioneye-maven-plugin.version>
 		<versioneye-maven-plugin.apiKey>${env.VERSIONEYE_APIKEY}</versioneye-maven-plugin.apiKey>
 		<versioneye-maven-plugin.projectId>${env.VERSIONEYE_PROJECTID}</versioneye-maven-plugin.projectId>
 	</properties>
@@ -79,7 +79,7 @@
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>servlet-api</artifactId>
-			<version>6.0.47</version>
+			<version>6.0.48</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -164,7 +164,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
-				<version>3.5.1</version>
+				<version>3.6</version>
 				<configuration>
 					<reportPlugins>
 						<plugin>
@@ -228,7 +228,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.5.1</version>
+				<version>3.6.1</version>
 				<configuration>
 					<source>${java.version}</source>
 					<target>${java.version}</target>
@@ -241,7 +241,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
-                <version>3.0.1</version>
+                <version>3.0.2</version>
                 <configuration>
                     <encoding>${project.build.sourceEncoding}</encoding>
                     <nonFilteredFileExtensions>
