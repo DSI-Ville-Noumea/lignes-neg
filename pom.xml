@@ -49,8 +49,8 @@
 		<versioneye-maven-plugin.version>3.11.2</versioneye-maven-plugin.version>
 		<versioneye-maven-plugin.apiKey>${env.VERSIONEYE_APIKEY}</versioneye-maven-plugin.apiKey>
 		<versioneye-maven-plugin.projectId>${env.VERSIONEYE_PROJECTID}</versioneye-maven-plugin.projectId>
-		<jt400.version>9.2</jt400.version>
-		<servlet-api.version>6.0.51</servlet-api.version>
+		<jt400.version>9.3</jt400.version>
+		<servlet-api.version>6.0.53</servlet-api.version>
 	</properties>
 
 	<prerequisites>
