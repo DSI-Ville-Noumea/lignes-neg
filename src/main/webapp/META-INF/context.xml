@@ -35,7 +35,6 @@
 		
 	
 	<Parameter description="Hote SGBD (ROBINNW ou NOUMA)" name="HOST_SGBD" override="false" value="DS" />
-	<Parameter description="Environnement starjet (DVLP, TEST ou PROD)" name="STARJET_MODE" override="false" value="PROD" />
 	<Parameter description="Nom de l'application déclarée SIDRAP pour connaitre les droits" name="APPLICATION" override="false" value="LignesNegatives" />
 	<Parameter description="Critère de recherche LDAP" name="CRITERE_RECHERCHE_LDAP" override="false" value="samaccountname" />
 	<Parameter description="Admin LDAP" name="HOST_LDAP_ADMIN" override="false" value="cn=***REMOVED***,ou=WAS,ou=APPLI,ou=Z-users" />
