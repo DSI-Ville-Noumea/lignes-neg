@@ -3,9 +3,6 @@
 # lignes-neg
 Repo lignes-neg.
 
-
-Description
-
 Tous les mois, lorsque les payes sont générées, des montants doivent être injectés dans la comptabilité.
 
 Il arrive que certains montants dépassent le budget disponible et génèrent des lignes négatives.
